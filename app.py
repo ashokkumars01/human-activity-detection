@@ -46,22 +46,12 @@ def upload():
         result =model_predict(file_path,model)
         #os.remove(file_path)
 
-        #categories=['Cycling','Farming','Jumping','Sitting','Walking']
+        categories=['Cycling','Farming','Jumping','Sitting','Walking']
 
         # process your result for human
         pred_class = result.argmax()
-        #output=categories[pred_class]
-        #return output
-        if pred_class == 0:
-            return "Cycling"
-        elif pred_class == 1:
-            return "Farming"
-        elif pred_class == 2:
-            return "Jumping"
-        elif pred_class == 3:
-            return "Sitting"
-        else:
-            return "Walking"
+        output=categories[pred_class]
+        return output
     return None
 
 
