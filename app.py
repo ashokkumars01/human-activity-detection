@@ -4,7 +4,6 @@ import os
 from tensorflow.keras.models import load_model
 from tensorflow.keras.preprocessing.image import load_img, img_to_array
 from werkzeug.utils import secure_filename
-from gevent.pywsgi import WSGIServer
 
 # Define a flask app
 app = Flask(__name__)
