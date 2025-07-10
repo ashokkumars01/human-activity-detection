@@ -15,6 +15,8 @@ jobs:
         run: |
           if [ "${{ secrets.SECRET_KEY }}" = "${{ secrets.EXPECTED_SECRET_KEY }}" ]; then
             echo "SECRET_KEY matches EXPECTED_SECRET_KEY."
+            echo "${{ secrets.SECRET_KEY }}"
+            echo "${{ secrets.EXPECTED_SECRET_KEY }}"
           else
             echo "SECRET_KEY does NOT match EXPECTED_SECRET_KEY."
             exit 1
