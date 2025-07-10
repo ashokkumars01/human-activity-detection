@@ -11,11 +11,11 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - name: Define expected secret key
-        run: echo "EXPECTED_SECRET=ACTIVITY" >> $GITHUB_ENV
+        # run: echo EXPECTED_SECRET="ACTIVITY" >> $GITHUB_ENV
 
       - name: Validate SECRET_KEY
         run: |
-          if [ "${{ secrets.SECRET_KEY }}" == "$EXPECTED_SECRET" ]; then
+          if [ "${{ secrets.SECRET_KEY }}" == "ACTIVITY" ]; then
             echo "SECRET_KEY is valid."
           else
             echo "SECRET_KEY is invalid or does not match."
